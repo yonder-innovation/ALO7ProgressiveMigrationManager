@@ -152,7 +152,7 @@
 }
 
 - (BOOL)lightweightMigrationURL:(NSURL *)sourceStoreURL toModel:(NSManagedObjectModel *)destinationModel type:(NSString *)type options:(NSDictionary *)options error:(NSError **)error {
-    NSDictionary *storeOptions = [NSMutableDictionary dictionaryWithDictionary:options];
+    NSMutableDictionary *storeOptions = [NSMutableDictionary dictionaryWithDictionary:options];
     storeOptions[NSMigratePersistentStoresAutomaticallyOption] = @YES;
     storeOptions[NSInferMappingModelAutomaticallyOption] = @YES;
     storeOptions[NSSQLitePragmasOption] = @{@"journal_mode" : @"WAL"};
